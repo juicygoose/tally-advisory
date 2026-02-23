@@ -1,16 +1,10 @@
 import './App.css';
+import { Routes, Route } from 'react-router';
 import useReveal from './hooks/useReveal';
 import Nav from './components/Nav';
-import Hero from './components/Hero';
-import About from './components/About';
-import Partners from './components/Partners';
-import Services from './components/Services';
-import Values from './components/Values';
-import Process from './components/Process';
-import Trust from './components/Trust';
-import Faq from './components/Faq';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   useReveal();
@@ -18,15 +12,10 @@ function App() {
   return (
     <>
       <Nav />
-      <Hero />
-      <About />
-      <Partners />
-      <Services />
-      <Values />
-      <Process />
-      <Trust />
-      <Faq />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/a-propos" element={<AboutPage />} />
+      </Routes>
       <Footer />
     </>
   );

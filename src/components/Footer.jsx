@@ -1,10 +1,12 @@
+import { Link } from 'react-router';
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <div className="footer-logo">
+        <Link to="/" className="footer-logo">
           <img src="/Logotype_Tally.webp" alt="Tally Advisory" className="footer-logo-img" />
-        </div>
+        </Link>
         <ul className="footer-links">
           <li><a href="#">Mentions légales</a></li>
           <li><a href="#">Politique de confidentialité</a></li>

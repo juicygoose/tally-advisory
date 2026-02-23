@@ -156,6 +156,28 @@
 
 .nav-cta::after { display: none !important; }
 
+/* Light nav for subpages with light backgrounds */
+.nav--light:not(.scrolled) .nav-links a {
+    color: var(--text-body);
+}
+
+.nav--light:not(.scrolled) .nav-links a:hover {
+    color: var(--text-dark);
+}
+
+.nav--light:not(.scrolled) .nav-cta {
+    color: var(--gold) !important;
+    border-color: rgba(203, 124, 82, 0.4);
+}
+
+.nav--light:not(.scrolled) .nav-mobile-toggle span {
+    background: var(--text-dark);
+}
+
+.nav--light:not(.scrolled) .nav-logo-img {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(15%) saturate(700%) hue-rotate(130deg);
+}
+
 .nav-mobile-toggle {
     display: none;
     flex-direction: column;
@@ -467,6 +489,29 @@
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ========== TAGLINE ========== */
+.tagline {
+    padding: 6rem 0;
+    background: var(--ivory);
+    text-align: center;
+}
+
+.tagline-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.tagline-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--text-dark);
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 /* ========== ABOUT ========== */
 .about {
@@ -1375,4 +1420,277 @@
 @media (max-width: 480px) {
     .hero-title { font-size: 2.4rem; }
     .service-card { padding: 2.5rem 1.5rem; }
+}
+
+/* ========== PAGE HERO (subpages) ========== */
+.page-hero {
+    padding: 12rem 0 6rem;
+    background: var(--ivory);
+    text-align: center;
+}
+
+.page-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.page-hero .section-label {
+    justify-content: center;
+}
+
+.page-hero .section-label::before {
+    display: none;
+}
+
+.page-hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--text-dark);
+    letter-spacing: -0.01em;
+    margin-top: 0.5rem;
+}
+
+.page-hero-title em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.page-hero-subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-hero-actions {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* ========== ABOUT BIO (a-propos page) ========== */
+.about-bio {
+    padding: 6rem 0;
+    background: var(--ivory);
+    text-align: center;
+}
+
+.about-bio-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.about-bio-photo-wrap {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 2.5rem;
+}
+
+.about-bio-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    display: block;
+}
+
+.about-bio-badge {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 40px;
+    height: 40px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.about-bio-name {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+
+.about-bio-text {
+    text-align: left;
+}
+
+.about-bio-text p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.9;
+    color: var(--text-body);
+    margin-top: 1.5rem;
+}
+
+.about-bio-text p:first-child {
+    margin-top: 0;
+}
+
+.about-bio-text strong {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.about-bio-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-dark);
+    background: transparent;
+    padding: 1rem 2.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.4s var(--ease-out-expo);
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* ========== ABOUT DESCRIPTION ========== */
+.about-description {
+    padding: 5rem 0;
+    background: var(--ivory-warm);
+}
+
+.about-description-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.about-description-text {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.9;
+    color: var(--text-body);
+    margin-top: 1.5rem;
+}
+
+.about-description-text:first-child {
+    margin-top: 0;
+}
+
+.about-description-text strong {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.about-description-brand {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+/* ========== ABOUT MISSION ========== */
+.about-mission {
+    padding: 6rem 0;
+    background: var(--gold);
+    position: relative;
+}
+
+.about-mission-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.about-mission-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.about-mission-text {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1.5rem;
+}
+
+.about-mission-text:first-of-type {
+    margin-top: 0;
+}
+
+.about-mission-text strong {
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* ========== ABOUT CONVICTION ========== */
+.about-conviction {
+    padding: 5rem 0;
+    background: var(--ivory-warm);
+    text-align: center;
+}
+
+.about-conviction-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.about-conviction-quote {
+    font-family: var(--font-serif);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-dark);
+    position: relative;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(203, 124, 82, 0.2);
+    border-bottom: 1px solid rgba(203, 124, 82, 0.2);
+}
+
+/* ========== RESPONSIVE (about page) ========== */
+@media (max-width: 768px) {
+    .page-hero { padding: 10rem 0 4rem; }
+    .page-hero-inner { padding: 0 1.5rem; }
+    .about-bio-inner { padding: 0 1.5rem; }
+    .about-description-inner { padding: 0 1.5rem; }
+    .about-mission-inner { padding: 0 1.5rem; }
+    .about-conviction-inner { padding: 0 1.5rem; }
+    .about-bio-actions { flex-direction: column; align-items: center; }
 }
